@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 
 require_once '../vendor/autoload.php';
 
-// api/users/1
+// api/dev ou projeto/1
 if ($_GET['url']) {
     $url = explode('/', $_GET['url']);
     //var_dump($url);
@@ -41,6 +41,6 @@ if ($_GET['url']) {
                 exit;
             }
         }
-        echo 'API EM CONSTRUÇÃO!';
+        header('location:../index.php');
     }
 }
