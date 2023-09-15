@@ -16,7 +16,7 @@ class Profissional
         if ($stmt->rowCount() > 0) {
             return $stmt->fetch(\PDO::FETCH_ASSOC);
         } else {
-            throw new \Exception("Nenhum usuário encontrado!");
+            throw new \Exception("Nenhum profissional encontrado!");
         }
     }
 
@@ -29,7 +29,7 @@ class Profissional
         if ($stmt->rowCount() > 0) {
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         } else {
-            throw new \Exception("Nenhum usuário encontrado!");
+            throw new \Exception("Nenhum profissional encontrado!");
         }
     }
 
@@ -51,7 +51,7 @@ class Profissional
         if ($stmt->rowCount() > 0) {
             return 'Profissional inserido(a) com sucesso!';
         } else {
-            throw new \Exception("Falha ao inserir usuário(a)!");
+            throw new \Exception("Falha ao inserir profissional(a)!");
         }
     } 
 
@@ -75,7 +75,7 @@ class Profissional
         if ($stmt->rowCount() > 0) {
             return 'Profissional alterado(a) com sucesso!';
         } else {
-            throw new \Exception("Falha na tentativa de alterar de usuário");
+            throw new \Exception("Falha na tentativa de alterar o profissional");
         }
     }
 
@@ -87,9 +87,9 @@ class Profissional
         $stmt->bindValue(':id', $id);
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
-            return 'Usuário excluído com sucesso!';
+            return 'Profissional excluído com sucesso!';
         } else {
-            throw new \Exception("Falha na tentativa de exclusão de usuário");
+            throw new \Exception("Falha na tentativa de exclusão do profissional");
         }
     }
 }
