@@ -17,12 +17,12 @@ class ProjetoService
 
     public function post()
     {
-        $data = $_POST;
+        $data = $_POST;        
         return Projeto::insert($data);
     }
 
-    public function postAlter($data)
-    {
+    public function postAlter()
+    {      
         $data = $_POST;
         return Projeto::alterar($data);
     }
